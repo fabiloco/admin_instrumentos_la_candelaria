@@ -1,15 +1,17 @@
+import { login } from "./services.js";
+
 const domUser = document.getElementById('user');
 const domPassword = document.getElementById('password');
 
 const domForm = document.getElementById('form');
 
 let user = {
-    user: '',
+    name: '',
     password: '',
 };
 
 domUser.addEventListener('keyup', (e) => {
-    user.user = e.target.value;
+    user.name = e.target.value;
 });
 
 domPassword.addEventListener('keyup', (e) => {
@@ -18,8 +20,11 @@ domPassword.addEventListener('keyup', (e) => {
 
 domForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log('heki');
+    sendLogin();
 })
 
-const sendLogin = (e) => {
+const sendLogin = async () => {
+    const token = await login(user);
+    window.sessionStorage.setItem('userToken', token)
+    window.location.href = '/panel'
 };
