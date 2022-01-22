@@ -107,105 +107,70 @@
                 </div>
             </aside>
 
-            <div id="panel-products" class="flex justify-center w-full h-screen pt-16 overflow-y-auto">
+            <div id="panel-category" class="flex justify-center w-full h-screen pt-16 overflow-y-auto">
                 <div class="w-3/4 p-6">
-                    <h1 class="mb-4 text-5xl font-bold">Nuevo producto</h1>
+                    <h1 class="mb-4 text-5xl font-bold">Nueva categoria</h1>
                     <div
                         class="w-full mb-6 bg-slate-300"
                         style="height: 1px"
                     ></div>
-                    <div class="shadow sm:rounded-md sm:overflow-hidden">
-                        <div class="px-4 py-5 space-y-6 bg-white sm:p-6">
-                            <div class="grid grid-cols-3 gap-6">
-                                <div class="col-span-3 sm:col-span-2">
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <p
-                                            class="block text-sm font-medium text-gray-700"
-                                            >Nombre del producto</p
-                                        >
-                                        <p
-                                            id="product-name"
-                                            class="block w-full mt-1 text-lg"
-                                        >Nombre</p>
+
+                    <form action="#" method="POST" id="category-form">
+                        <div class="shadow sm:rounded-md sm:overflow-hidden">
+                            <div class="px-4 py-5 space-y-6 bg-white sm:p-6">
+                                <div class="grid grid-cols-3 gap-6">
+                                    <div class="col-span-3 sm:col-span-2">
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label
+                                                for="category-name"
+                                                class="block text-sm font-medium text-gray-700"
+                                                >Nombre de la categoria</label
+                                            >
+                                            <input
+                                                type="text"
+                                                name="category-name"
+                                                id="category-name"
+                                                placeholder="Nombre de la categoria"
+                                                class="block w-full px-2 py-1 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-span-3 sm:col-span-2">
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <p
-                                            class="block text-sm font-medium text-gray-700"
-                                            >Precio del producto</p
-                                        >
-                                        <p
-                                            id="product-price"
-                                            class="block w-full mt-1 text-lg"
-                                        >$COP 000</p>
-                                    </div>
-                                </div>
-                                <div class="col-span-3 sm:col-span-2">
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <p
-                                            class="block text-sm font-medium text-gray-700"
-                                            >Peso del producto</p
-                                        >
-                                        <p
-                                            id="product-weight"
-                                            class="block w-full mt-1 text-lg"
-                                        >12kg</p>
-                                    </div>
-                                </div>
-                                <div class="col-span-3 sm:col-span-2">
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <p
-                                            class="block text-sm font-medium text-gray-700"
-                                            >Stock del producto</p
-                                        >
-                                        <p
-                                            id="product-stock"
-                                            class="block w-full mt-1 text-lg"
-                                        >12</p>
+
+                                <div>
+                                    <label
+                                        for="category-description"
+                                        class="block text-sm font-medium text-gray-700"
+                                    >
+                                        Descripción
+                                    </label>
+                                    <div class="mt-1">
+                                        <textarea
+                                            id="category-description"
+                                            name="category-description"
+                                            rows="3"
+                                            class="block w-full p-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                            placeholder="Este la mejor categoria del mundo"
+                                        ></textarea>
                                     </div>
                                 </div>
                             </div>
-
-                            <div>
-                                <p
-                                    class="block text-sm font-medium text-gray-700"
-                                    >Descripción</p
+                            <div
+                                class="px-4 py-3 text-right bg-gray-50 sm:px-6"
+                            >
+                                <button
+                                    type="submit"
+                                    class="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                 >
-                                <p
-                                    id="product-description"
-                                    class="block w-full mt-1 text-md"
-                                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quidem. Quae, quos aspernatur architecto quas exercitationem ipsam nam non aut inventore ipsa blanditiis neque repudiandae ratione necessitatibus consequatur laudantium nesciunt!
-                                Numquam, quae facere doloribus ducimus tempore molestiae fugit non, blanditiis molestias quasi nihil consectetur unde maxime. Sequi minima totam odio sapiente esse voluptate illo reprehenderit, iusto necessitatibus, ipsa facere. Veniam!</p>
-
-                            </div>
-
-                            <div>
-                                <p
-                                    class="block text-sm font-medium text-gray-700"
-                                    >Miniatura del producto</p
-                                >
-                                <div
-                                    id="product-thumbnail"
-                                    class="block w-full mt-1 text-md"
-                                ></div>
-                            </div>
-                            <div>
-                                <p
-                                    class="block text-sm font-medium text-gray-700"
-                                    >Imagenes del producto</p
-                                >
-                                <div
-                                    id="product-images"
-                                    class="flex flex-wrap w-full gap-6 mt-1 text-md"
-                                ></div>
+                                    Enviar
+                                </button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script type="module" src="./src/product.js"></script>
+        <script type="module" src="./src/newCategory.js"></script>
     </body>
 </html>

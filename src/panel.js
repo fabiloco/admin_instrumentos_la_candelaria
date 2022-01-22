@@ -1,4 +1,5 @@
 import { auth } from "./auth.js";
+import { showCategoriesInDOM } from "./categories.js";
 import { showProductsInDOM } from "./products.js";
 
 const token = auth();
@@ -19,5 +20,7 @@ window.addEventListener('hashchange', (e) => {
 
         document.getElementById('panel-categories').classList.remove('hidden');
         document.getElementById('panel-categories').classList.add('flex');
+
+        showCategoriesInDOM();
     };
 });
