@@ -66,7 +66,7 @@ export const showProductsInDOM = async (url = `${API_URL}/products`) => {
                         class="flex-shrink-0 h-10 w-10"
                     >
                         <img
-                            class="h-10 w-10 rounded-full"
+                            class="h-10 w-10 rounded-full object-contain"
                             src=${STORAGE_URL}/${element.thumbnail}
                             alt=""
                         />
@@ -100,16 +100,22 @@ export const showProductsInDOM = async (url = `${API_URL}/products`) => {
         const td = document.createElement('td');
         td.classList = 'px-6 py-4 whitespace-nowrap text-right text-sm font-medium';
 
+        const showBtn = document.createElement('a');
+        showBtn.textContent = 'Ver';
+        showBtn.href = `/product#${element.id}`;
+        showBtn.classList = 'text-green-600 hover:text-green-900';
+
         const editBtn = document.createElement('a');
         editBtn.textContent = 'Editar';
-        editBtn.href = `/editProduct#${element.id}`
-        editBtn.classList = 'text-indigo-600 hover:text-indigo-900';
+        editBtn.href = `/editProduct#${element.id}`;
+        editBtn.classList = 'text-indigo-600 hover:text-indigo-900 ml-3';
 
         const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = 'Eliminar'
+        deleteBtn.textContent = 'Eliminar';
         deleteBtn.addEventListener('click', (e) => removeProduct(element.id));
         deleteBtn.classList = 'text-red-600 hover:text-red-900 ml-3';
         
+        td.appendChild(showBtn);
         td.appendChild(editBtn);
         td.appendChild(deleteBtn);
         

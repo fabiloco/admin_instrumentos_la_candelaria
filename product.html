@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="./dist/styles.css" />
+        <title>Admin Panel</title>
+    </head>
+
+    <body>
+        <div class="flex w-screen h-screen bg-gray-200">
+            <!-- container -->
+            <aside
+                class="flex flex-col items-center h-full text-gray-700 bg-white shadow"
+            >
+                <!-- Side Nav Bar-->
+
+                <div class="flex items-center w-full h-16">
+                    <!-- Logo Section -->
+                    <a class="w-6 h-6 mx-auto" href="/panel">
+                        <span class="text-2xl">🎸</span>
+                    </a>
+                </div>
+
+                <ul>
+                    <!-- Items Section -->
+                    <li class="hover:bg-gray-100">
+                        <a
+                            href="/panel#products"
+                            class="flex items-center justify-center w-full h-16 px-6 focus:text-orange-500"
+                        >
+                            <svg
+                                class="w-5 h-5"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <polyline
+                                    points="22 12 16 12 14 15 10 15 8 12 2 12"
+                                ></polyline>
+                                <path
+                                    d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0
+                                2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0
+                                0-1.79 1.11z"
+                                ></path>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="hover:bg-gray-100">
+                        <a
+                            href="#categories"
+                            class="flex items-center justify-center w-full h-16 px-6 focus:text-orange-500"
+                        >
+                            <svg
+                                class="w-5 h-5"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                                ></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="flex items-center w-full h-16 mt-auto">
+                    <!-- Action Section -->
+                    <button
+                        class="flex items-center justify-center w-10 w-full h-16 mx-auto focus:text-orange-500 hover:bg-red-200 focus:outline-none"
+                    >
+                        <svg
+                            class="w-5 h-5 text-red-700"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+                            ></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                    </button>
+                </div>
+            </aside>
+
+            <div id="panel-products" class="flex justify-center w-full h-screen pt-16 overflow-y-auto">
+                <div class="w-3/4 p-6">
+                    <h1 class="mb-4 text-5xl font-bold">Nuevo producto</h1>
+                    <div
+                        class="w-full mb-6 bg-slate-300"
+                        style="height: 1px"
+                    ></div>
+                    <div class="shadow sm:rounded-md sm:overflow-hidden">
+                        <div class="px-4 py-5 space-y-6 bg-white sm:p-6">
+                            <div class="grid grid-cols-3 gap-6">
+                                <div class="col-span-3 sm:col-span-2">
+                                    <div class="col-span-6 sm:col-span-3">
+                                        <p
+                                            class="block text-sm font-medium text-gray-700"
+                                            >Nombre del producto</p
+                                        >
+                                        <p
+                                            id="product-name"
+                                            class="block w-full mt-1 text-lg"
+                                        >Nombre</p>
+                                    </div>
+                                </div>
+                                <div class="col-span-3 sm:col-span-2">
+                                    <div class="col-span-6 sm:col-span-3">
+                                        <p
+                                            class="block text-sm font-medium text-gray-700"
+                                            >Precio del producto</p
+                                        >
+                                        <p
+                                            id="product-price"
+                                            class="block w-full mt-1 text-lg"
+                                        >$COP 000</p>
+                                    </div>
+                                </div>
+                                <div class="col-span-3 sm:col-span-2">
+                                    <div class="col-span-6 sm:col-span-3">
+                                        <p
+                                            class="block text-sm font-medium text-gray-700"
+                                            >Peso del producto</p
+                                        >
+                                        <p
+                                            id="product-weight"
+                                            class="block w-full mt-1 text-lg"
+                                        >12kg</p>
+                                    </div>
+                                </div>
+                                <div class="col-span-3 sm:col-span-2">
+                                    <div class="col-span-6 sm:col-span-3">
+                                        <p
+                                            class="block text-sm font-medium text-gray-700"
+                                            >Stock del producto</p
+                                        >
+                                        <p
+                                            id="product-stock"
+                                            class="block w-full mt-1 text-lg"
+                                        >12</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p
+                                    class="block text-sm font-medium text-gray-700"
+                                    >Descripción</p
+                                >
+                                <p
+                                    id="product-description"
+                                    class="block w-full mt-1 text-md"
+                                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quidem. Quae, quos aspernatur architecto quas exercitationem ipsam nam non aut inventore ipsa blanditiis neque repudiandae ratione necessitatibus consequatur laudantium nesciunt!
+                                Numquam, quae facere doloribus ducimus tempore molestiae fugit non, blanditiis molestias quasi nihil consectetur unde maxime. Sequi minima totam odio sapiente esse voluptate illo reprehenderit, iusto necessitatibus, ipsa facere. Veniam!</p>
+
+                            </div>
+
+                            <div>
+                                <p
+                                    class="block text-sm font-medium text-gray-700"
+                                    >Miniatura del producto</p
+                                >
+                                <div
+                                    id="product-thumbnail"
+                                    class="block w-full mt-1 text-md"
+                                ></div>
+                            </div>
+                            <div>
+                                <p
+                                    class="block text-sm font-medium text-gray-700"
+                                    >Imagenes del producto</p
+                                >
+                                <div
+                                    id="product-images"
+                                    class="flex flex-wrap w-full gap-6 mt-1 text-md"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="module" src="./src/product.js"></script>
+    </body>
+</html>
