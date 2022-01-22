@@ -50,8 +50,6 @@ export const updateProduct = async (id, product, token) => {
 export const storeProduct = async (product, token) => {
     const body = new FormData();
 
-    console.log(product);
-
     body.append('name', product.name);
     body.append('price', product.price);
     body.append('weight', product.weight);
@@ -117,8 +115,6 @@ export const updateCategory = async (id, category, token) => {
 
 export const storeCategory = async (category, token) => {
     const body = new FormData();
-
-    console.log(category);
 
     body.append('name', category.name);
     body.append('description', category.description);

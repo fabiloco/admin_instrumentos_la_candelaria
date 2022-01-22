@@ -1,6 +1,6 @@
 import { auth } from "./auth.js";
-import { API_URL, STORAGE_URL } from "./config/config.js";
-import { deteleProduct, getCategories } from "./services.js";
+import { API_URL } from "./config/config.js";
+import { deteleCategory, getCategories } from "./services.js";
 
 const token = auth();
 
@@ -37,7 +37,7 @@ const removeCategory = (id) => {
         denyButtonText: `No`,
     }).then((result) => {
         if (result.isConfirmed) {
-            deteleProduct(id, token);
+            deteleCategory(id, token);
             Swal.fire('Producto eliminado', '', 'success')
             showCategoriesInDOM();
         } else if (result.isDenied) {
