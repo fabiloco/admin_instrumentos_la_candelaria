@@ -55,4 +55,11 @@ domFormEdit.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     await storeProduct(product, token);
+    
+    Swal.fire({
+        title: 'Exito!',
+        text: 'Producto creado exitosamente',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+    });
 });

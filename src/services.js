@@ -65,3 +65,12 @@ export const storeProduct = async (product, token) => {
     const data = await res.json();
     return data;
 };
+
+export const deteleProduct = async (id, token) => {
+
+    const res = await fetch(`${API_URL}/products/${id}`, { method: 'DELETE',
+        headers: { ...headers,  "Authorization": `Bearer ${token}` }
+    });
+    const data = await res.json();
+    return data.data;
+};

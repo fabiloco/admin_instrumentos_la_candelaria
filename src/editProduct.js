@@ -51,6 +51,13 @@ domFormEdit.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     await updateProduct(id, product, token);
+
+    Swal.fire({
+        title: 'Exito!',
+        text: 'Producto actualizado exitosamente',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+    });
 })
 
 const setProductData = async () => {

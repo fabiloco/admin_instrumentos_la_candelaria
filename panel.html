@@ -106,12 +106,12 @@
                 </div>
             </aside>
 
-            <div id="panel-products" class="flex-col items-center hidden w-full pt-16">
+            <div id="panel-products" class="flex-col items-center justify-center hidden w-full">
                 <div class="w-3/4 p-6">
                     <h1 class="mb-4 text-5xl font-bold">Productos</h1>
                     <div class="w-full mb-6 bg-slate-300" style="height: 1px;" ></div>
                     <div class="mb-4 text-right">
-                        <a href="/newProduct.html" class="px-4 py-2 text-sm font-bold text-white bg-blue-500 rounded hover:bg-blue-700">Nuevo producto</a>
+                        <a href="/newProduct.html" class="px-4 py-2 text-sm font-bold text-white bg-indigo-500 rounded hover:bg-indigo-700">Nuevo producto</a>
                     </div>
                     <div class="flex flex-col">
                         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -173,11 +173,10 @@
                     </div>
                 </div>
                 <div class="max-w-2xl mx-auto">
-
                     <nav aria-label="Page navigation example">
                         <ul id="paginator" class="inline-flex -space-x-px"></ul>
                     </nav>
-                </div>               
+                </div>
             </div>
 
             <div id="panel-categories" class="justify-center hidden w-full pt-16">
@@ -236,58 +235,58 @@
                                         >
                                             
 
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap"
-                                            >
-                                                <div
-                                                    class="flex items-center"
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
                                                 >
                                                     <div
-                                                        class="flex-shrink-0 w-10 h-10"
+                                                        class="flex items-center"
                                                     >
-                                                        <img
-                                                            class="w-10 h-10 rounded-full"
-                                                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                                            alt=""
-                                                        />
+                                                        <div
+                                                            class="flex-shrink-0 w-10 h-10"
+                                                        >
+                                                            <img
+                                                                class="w-10 h-10 rounded-full"
+                                                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                        <div class="ml-4">
+                                                            
+                                                                Admin
+                                                            
+                                                        </div>
                                                     </div>
-                                                    <div class="ml-4">
-                                                        
-                                                            Admin
-                                                        
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"
-                                            >
-                                                Admin
-                                            </td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"
-                                            >
-                                                Admin
-                                            </td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap"
-                                            >
-                                                <span
-                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full"
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"
                                                 >
-                                                    Active
-                                                </span>
-                                            </td>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap"
-                                            >
-                                                <a
-                                                    href="#"
-                                                    class="text-indigo-600 hover:text-indigo-900"
-                                                    >Edit</a
+                                                    Admin
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"
                                                 >
-                                            </td>
-                                        </tr>
+                                                    Admin
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <span
+                                                        class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full"
+                                                    >
+                                                        Active
+                                                    </span>
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap"
+                                                >
+                                                    <a
+                                                        href="#"
+                                                        class="text-indigo-600 hover:text-indigo-900"
+                                                        >Edit</a
+                                                    >
+                                                </td>
+                                            </tr>
 
                                             
                                         </tbody>
@@ -299,6 +298,7 @@
                 </div>
             </div>
         </div>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script type="module" src="./src/panel.js"></script>
     </body>
 </html>

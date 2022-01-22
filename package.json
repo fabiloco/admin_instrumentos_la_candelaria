@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.0.15"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.3.6"
   }
 }
