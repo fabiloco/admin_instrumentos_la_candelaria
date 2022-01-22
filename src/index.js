@@ -1,5 +1,8 @@
 import { login } from "./services.js";
 
+const token = window.sessionStorage.getItem('userToken');
+if(token) window.location.href = '/panel';
+
 const domUser = document.getElementById('user');
 const domPassword = document.getElementById('password');
 

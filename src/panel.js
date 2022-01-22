@@ -1,4 +1,7 @@
+import { auth } from "./auth.js";
 import { showProductsInDOM } from "./products.js";
+
+const token = auth();
 
 window.addEventListener('hashchange', (e) => {
     const hash = window.location.hash.slice(1);
