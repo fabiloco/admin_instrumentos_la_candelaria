@@ -1,10 +1,33 @@
+import { API_URL } from "./config/config.js";
 import { getProducts } from "./services.js";
 
 const domProducts = document.getElementById('products-list');
 
-export const showProductsInDOM = async () => {
-    const { data, link, meta } = await getProducts();
-    console.log(data);
+const domPaginator = document.getElementById('paginator');
+
+const removePagination = () => {
+    domPaginator.innerHTML = '';
+};
+
+const addPagination = (link) => {
+    link.map((element, i) => {
+        const li = document.createElement('li');
+        const button = document.createElement('button');
+        button.classList = 'px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+        
+        if(element.url) button.addEventListener('click', () => showProductsInDOM(element.url));
+
+        button.innerHTML = `${element.label}`;
+        li.appendChild(button);
+
+        domPaginator.appendChild(li);
+    });
+};
+
+export const showProductsInDOM = async (url = `${API_URL}/products`) => {
+    const { data, links, meta } = await getProducts(url);
+
+    removePagination();
 
     domProducts.innerHTML = '';
 
@@ -63,4 +86,6 @@ export const showProductsInDOM = async () => {
 
         domProducts.appendChild(tr);
     });
+
+    addPagination(links);
 };

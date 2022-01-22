@@ -10,16 +10,16 @@
     </head>
 
     <body>
-        <div class="h-screen w-screen flex bg-gray-200">
+        <div class="flex w-screen h-screen bg-gray-200">
             <!-- container -->
             <aside
-                class="flex flex-col items-center bg-white text-gray-700 shadow h-full"
+                class="flex flex-col items-center h-full text-gray-700 bg-white shadow"
             >
                 <!-- Side Nav Bar-->
 
-                <div class="h-16 flex items-center w-full">
+                <div class="flex items-center w-full h-16">
                     <!-- Logo Section -->
-                    <a class="h-6 w-6 mx-auto" href="/panel">
+                    <a class="w-6 h-6 mx-auto" href="/panel">
                         <span class="text-2xl">🎸</span>
                     </a>
                 </div>
@@ -29,10 +29,10 @@
                     <li class="hover:bg-gray-100">
                         <a
                             href="#products"
-                            class="h-16 px-6 flex justify-center items-center w-full focus:text-orange-500"
+                            class="flex items-center justify-center w-full h-16 px-6 focus:text-orange-500"
                         >
                             <svg
-                                class="h-5 w-5"
+                                class="w-5 h-5"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
                                 height="24"
@@ -58,10 +58,10 @@
                     <li class="hover:bg-gray-100">
                         <a
                             href="#categories"
-                            class="h-16 px-6 flex justify-center items-center w-full focus:text-orange-500"
+                            class="flex items-center justify-center w-full h-16 px-6 focus:text-orange-500"
                         >
                             <svg
-                                class="h-5 w-5"
+                                class="w-5 h-5"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
                                 height="24"
@@ -80,13 +80,13 @@
                     </li>
                 </ul>
 
-                <div class="mt-auto h-16 flex items-center w-full">
+                <div class="flex items-center w-full h-16 mt-auto">
                     <!-- Action Section -->
                     <button
-                        class="h-16 w-10 mx-auto flex flex justify-center items-center w-full focus:text-orange-500 hover:bg-red-200 focus:outline-none"
+                        class="flex items-center justify-center w-10 w-full h-16 mx-auto focus:text-orange-500 hover:bg-red-200 focus:outline-none"
                     >
                         <svg
-                            class="h-5 w-5 text-red-700"
+                            class="w-5 h-5 text-red-700"
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"
@@ -107,44 +107,44 @@
                 </div>
             </aside>
 
-            <div id="panel-products" class="w-full justify-center pt-16 hidden">
+            <div id="panel-products" class="flex-col items-center hidden w-full pt-16">
                 <div class="w-3/4 p-6">
-                    <h1 class="text-5xl mb-4 font-bold">Productos</h1>
-                    <div class="mb-6 w-full bg-slate-300" style="height: 1px;" ></div>
+                    <h1 class="mb-4 text-5xl font-bold">Productos</h1>
+                    <div class="w-full mb-6 bg-slate-300" style="height: 1px;" ></div>
                     <div class="flex flex-col">
                         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                             <div
-                                class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
+                                class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8"
                             >
                                 <div
-                                    class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
+                                    class="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg"
                                 >
                                     <table
-                                        class="min-w-full divide-y divide-gray-200 overflow-y-auto h-full"
+                                        class="h-full min-w-full overflow-y-auto divide-y divide-gray-200"
                                     >
                                         <thead class="bg-gray-50">
                                             <tr>
                                                 <th
                                                     scope="col"
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                                                 >
                                                     Nombre
                                                 </th>
                                                 <th
                                                     scope="col"
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                                                 >
                                                     Price
                                                 </th>
                                                 <th
                                                     scope="col"
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                                                 >
                                                     SKU
                                                 </th>
                                                 <th
                                                     scope="col"
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                                                 >
                                                     Stock
                                                 </th>
@@ -170,19 +170,26 @@
                         </div>
                     </div>
                 </div>
+                <!-- This is an example component -->
+                <div class="max-w-2xl mx-auto">
+
+                    <nav aria-label="Page navigation example">
+                        <ul id="paginator" class="inline-flex -space-x-px"></ul>
+                    </nav>
+                </div>               
             </div>
 
-            <div id="panel-categories" class="w-full justify-center pt-16 hidden">
+            <div id="panel-categories" class="justify-center hidden w-full pt-16">
                 <div class="w-3/4">
-                    <h1 class="text-5xl mb-4 font-bold">Categories</h1>
+                    <h1 class="mb-4 text-5xl font-bold">Categories</h1>
                     <hr class="mb-6" />
                     <div class="flex flex-col">
                         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                             <div
-                                class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
+                                class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8"
                             >
                                 <div
-                                    class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
+                                    class="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg"
                                 >
                                     <table
                                         class="min-w-full divide-y divide-gray-200"
@@ -191,25 +198,25 @@
                                             <tr>
                                                 <th
                                                     scope="col"
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                                                 >
                                                     Nombre
                                                 </th>
                                                 <th
                                                     scope="col"
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                                                 >
                                                     Price
                                                 </th>
                                                 <th
                                                     scope="col"
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                                                 >
                                                     SKU
                                                 </th>
                                                 <th
                                                     scope="col"
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                                                 >
                                                     Stock
                                                 </th>
@@ -236,10 +243,10 @@
                                                     class="flex items-center"
                                                 >
                                                     <div
-                                                        class="flex-shrink-0 h-10 w-10"
+                                                        class="flex-shrink-0 w-10 h-10"
                                                     >
                                                         <img
-                                                            class="h-10 w-10 rounded-full"
+                                                            class="w-10 h-10 rounded-full"
                                                             src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
                                                             alt=""
                                                         />
@@ -252,12 +259,12 @@
                                                 </div>
                                             </td>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                                                class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"
                                             >
                                                 Admin
                                             </td>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                                                class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"
                                             >
                                                 Admin
                                             </td>
@@ -265,13 +272,13 @@
                                                 class="px-6 py-4 whitespace-nowrap"
                                             >
                                                 <span
-                                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full"
                                                 >
                                                     Active
                                                 </span>
                                             </td>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                                                class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap"
                                             >
                                                 <a
                                                     href="#"

@@ -17,10 +17,10 @@ export const login = async (user) => {
 };
 
 // PRODUCTS
-export const getProducts = async (url) => {
-    const res = await fetch(`${API_URL}/products`, { method: 'GET', headers, });
+export const getProducts = async (url = `${API_URL}/products`) => {
+    const res = await fetch(url, { method: 'GET', headers, });
     const data = await res.json();
-    return { data: data.data, links: data.links, meta: data.meta };
+    return { data: data.data, links: data.meta.links, meta: data.meta };
 };
 
 export const getProduct = async (id) => {
