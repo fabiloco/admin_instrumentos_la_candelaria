@@ -1,5 +1,5 @@
 import { auth } from "./auth.js";
-import { updateProduct } from "./services.js";
+import { getProduct, updateProduct } from "./services.js";
 
 const id = window.location.hash.slice(1);
 
@@ -52,3 +52,16 @@ domFormEdit.addEventListener('submit', async (e) => {
 
     await updateProduct(id, product, token);
 })
+
+const setProductData = async () => {
+    const data = await getProduct(id);
+
+    domProductName.value = data.name;
+    domProductDescription.value = data.description;
+    domProductPrice.value = data.price;
+    domProductStock.value = data.stock;
+    domProductWeight.value = data.weight;
+    // domProductThumbnail.value = new File(data.thumbnail);
+};
+
+(() => { setProductData() })();

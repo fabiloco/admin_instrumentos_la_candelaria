@@ -6,7 +6,6 @@ const headers = {
 };
 
 const headers2 = {
-    "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
 
@@ -32,21 +31,12 @@ export const getProduct = async (id) => {
 
 export const updateProduct = async (id, product, token) => {
     const body = new FormData();
-    
-    console.log(product);
 
-    // body.append('name', product.name);
-    // body.append('price', product.price);
-    // body.append('weight', product.weight);
-    // body.append('stock', product.stock);
-    // body.append('description', product.description);
-    // body.append('thumbnail', product.thumbnail);
-
-    body.append('name', 'test');
-    body.append('price', '12');
-    body.append('weight', '12');
-    body.append('stock', '12');
-    body.append('description', 'test');
+    body.append('name', product.name);
+    body.append('price', product.price);
+    body.append('weight', product.weight);
+    body.append('stock', product.stock);
+    body.append('description', product.description);
     body.append('thumbnail', product.thumbnail);
 
     console.log(`${API_URL}/products/${id}`);
@@ -56,5 +46,4 @@ export const updateProduct = async (id, product, token) => {
         body,
     });
     const data = await res.json();
-    console.log(data);
 };
