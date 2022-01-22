@@ -1,9 +1,11 @@
-import { API_URL } from "./config/config.js";
+import { API_URL, STORAGE_URL } from "./config/config.js";
 import { getProducts } from "./services.js";
 
 const domProducts = document.getElementById('products-list');
 
 const domPaginator = document.getElementById('paginator');
+
+const domNewProductBtn = document.getElementById('new-product-btn');
 
 const removePagination = () => {
     domPaginator.innerHTML = '';
@@ -45,7 +47,7 @@ export const showProductsInDOM = async (url = `${API_URL}/products`) => {
                     >
                         <img
                             class="h-10 w-10 rounded-full"
-                            src=${element.thumbnail}
+                            src=${STORAGE_URL}/${element.thumbnail}
                             alt=""
                         />
                     </div>

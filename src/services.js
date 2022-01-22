@@ -39,11 +39,29 @@ export const updateProduct = async (id, product, token) => {
     body.append('description', product.description);
     body.append('thumbnail', product.thumbnail);
 
-    console.log(`${API_URL}/products/${id}`);
-
     const res = await fetch(`${API_URL}/products/${id}`, { method: 'POST',
         headers: { ...headers2, "Authorization": `Bearer ${token}` }, 
         body,
     });
     const data = await res.json();
+    return data;
+};
+
+export const storeProduct = async (product, token) => {
+    const body = new FormData();
+
+    body.append('name', product.name);
+    body.append('price', product.price);
+    body.append('weight', product.weight);
+    body.append('stock', product.stock);
+    body.append('description', product.description);
+    body.append('thumbnail', product.thumbnail);
+    body.append('images', product.images);
+
+    const res = await fetch(`${API_URL}/products`, { method: 'POST',
+        headers: { ...headers2, "Authorization": `Bearer ${token}` }, 
+        body,
+    });
+    const data = await res.json();
+    return data;
 };
