@@ -4,7 +4,7 @@ import { showProductsInDOM } from "./products.js";
 
 const token = auth();
 
-window.addEventListener('hashchange', (e) => {
+const changePageWithCurrentHash = () => {
     const hash = window.location.hash.slice(1);
     if(hash === 'products') {
         document.getElementById('panel-categories').classList.remove('flex');
@@ -23,4 +23,12 @@ window.addEventListener('hashchange', (e) => {
 
         showCategoriesInDOM();
     };
+};
+
+window.addEventListener('hashchange', (e) => {
+    changePageWithCurrentHash();
+});
+
+window.addEventListener('load', (e) => {
+    changePageWithCurrentHash();
 });

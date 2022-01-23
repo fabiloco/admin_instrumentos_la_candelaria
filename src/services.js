@@ -32,6 +32,8 @@ export const getProduct = async (id) => {
 export const updateProduct = async (id, product, token) => {
     const body = new FormData();
 
+    console.log(product);
+
     body.append('name', product.name);
     body.append('price', product.price);
     body.append('weight', product.weight);

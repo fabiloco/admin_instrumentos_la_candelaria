@@ -40,6 +40,9 @@ domFormEdit.addEventListener('submit', async (e) => {
 const setCategoryData = async () => {
     const data = await getCategory(id);
 
+    category.name = data.name;
+    category.description = data.description;
+
     domCategoryName.value = data.name;
     domCategoryDescription.value = data.description;
 };

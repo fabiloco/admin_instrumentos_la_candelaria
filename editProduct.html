@@ -28,7 +28,7 @@
                     <!-- Items Section -->
                     <li class="hover:bg-gray-100">
                         <a
-                            href="#products"
+                            href="/panel#products"
                             class="flex items-center justify-center w-full h-16 px-6 focus:text-orange-500"
                         >
                             <svg
@@ -57,7 +57,7 @@
 
                     <li class="hover:bg-gray-100">
                         <a
-                            href="#categories"
+                            href="/panel#categories"
                             class="flex items-center justify-center w-full h-16 px-6 focus:text-orange-500"
                         >
                             <svg
@@ -107,6 +107,7 @@
                 </div>
             </aside>
 
+
             <div id="panel-products" class="flex justify-center w-full h-screen pt-16 overflow-y-auto">
                 <div class="w-3/4 p-6">
                     <h1 class="mb-4 text-5xl font-bold">Editando producto</h1>
@@ -132,6 +133,7 @@
                                                 id="product-name"
                                                 placeholder="Nombre del producto"
                                                 class="block w-full px-2 py-1 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                                required
                                             />
                                         </div>
                                     </div>
@@ -148,6 +150,7 @@
                                                 id="product-price"
                                                 placeholder="Precio del producto"
                                                 class="block w-full px-2 py-1 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                                required
                                             />
                                         </div>
                                     </div>
@@ -164,6 +167,7 @@
                                                 id="product-weight"
                                                 placeholder="Peso del producto"
                                                 class="block w-full px-2 py-1 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                                required
                                             />
                                         </div>
                                     </div>
@@ -180,6 +184,7 @@
                                                 id="product-stock"
                                                 placeholder="Stock disponible del producto"
                                                 class="block w-full px-2 py-1 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                                required
                                             />
                                         </div>
                                     </div>
@@ -199,6 +204,7 @@
                                             rows="3"
                                             class="block w-full p-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                             placeholder="Este es le mejor producto del mundo"
+                                            required
                                         ></textarea>
                                     </div>
                                 </div>
@@ -240,6 +246,7 @@
                                                         name="product-thumbnail"
                                                         type="file"
                                                         class="sr-only"
+                                                        required
                                                     />
                                                 </label>
                                                 <p class="pl-1">

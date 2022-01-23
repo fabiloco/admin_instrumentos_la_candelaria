@@ -63,12 +63,19 @@ domFormEdit.addEventListener('submit', async (e) => {
 const setProductData = async () => {
     const data = await getProduct(id);
 
+    console.log(data);
+
+    product.name = data.name;
+    product.description = data.description;
+    product.price = data.price;
+    product.stock = data.stock;
+    product.weight = data.weight;
+
     domProductName.value = data.name;
     domProductDescription.value = data.description;
     domProductPrice.value = data.price;
     domProductStock.value = data.stock;
     domProductWeight.value = data.weight;
-    // domProductThumbnail.value = new File(data.thumbnail);
 };
 
 (() => { setProductData() })();
