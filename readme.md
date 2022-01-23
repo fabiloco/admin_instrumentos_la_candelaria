@@ -2,15 +2,17 @@
 
 ## Getting started
 
-Para iniciar la aplicación, primero instale las dependencias de node:
+Para poder iniciar la aplicación, primero debe clonar este repositorio, luego dirigirse a la carpeta y ejecutar los siguientes comandos:
+
+Primero instale las dependencias de node:
 
 ```
-    npm install
+ npm install
 ```
 
 Luego, inicie el servidor local de la aplicación con el siguiente comando:
 
 ```
-    npm start
+npm start
 ```
 
