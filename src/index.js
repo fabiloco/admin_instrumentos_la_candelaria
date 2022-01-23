@@ -24,7 +24,7 @@ domPassword.addEventListener('keyup', (e) => {
 domForm.addEventListener('submit', (e) => {
     e.preventDefault();
     sendLogin();
-})
+});
 
 const sendLogin = async () => {
     const token = await login(user);
